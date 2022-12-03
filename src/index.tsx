@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import ChartLine from './pages/chart/index';
 import reportWebVitals from './reportWebVitals';
+import './styles/reset.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <ChartLine/>
   </React.StrictMode>
 );
 
