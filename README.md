@@ -1,7 +1,8 @@
 # Welcome to line chart animated
 
   ![Vídeo sem título ‐ Feito com o Clipchamp (1)](https://user-images.githubusercontent.com/41484946/205466724-cd58e35e-bdd8-4fd9-bdd6-a2c479aec757.gif)
-
+## About
+#### This project is made using the `chart.js` library in order to automatically generate values and add them to the chart dynamically.
 ## How to run
   ### `npm start`
 
@@ -13,3 +14,5 @@
 <img align="center" style="max-width:100%;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"  width="100" height="100" alt="typescript" />
   </a>
 </p>
+
+
