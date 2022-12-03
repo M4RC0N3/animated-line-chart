@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { Chart as ChartJS, CategoryScale, LinearScale, Title, Tooltip, Legend, LineElement, PointElement, Filler } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import './index.css';
+import Github from  '../../assets/icon/github.svg';
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -62,6 +63,7 @@ export const LineOptions = { //chart configuration
   }
 };
 
+
 const ChartLine = () =>{
   const chartValue = useRef();
   const dataLine = { // chart stylizing
@@ -105,6 +107,11 @@ const ChartLine = () =>{
           <Line data={dataLine} options={LineOptions} ref={chartValue}></Line>
         </div>
       </div>
+      <footer>
+        <a href="https://github.com/M4RC0N3" target="_blank">
+          <img src={Github} alt="github logo" width={50} height={50}/>
+        </a>
+      </footer>
     </div>
   );
 }

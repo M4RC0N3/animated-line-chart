@@ -36,6 +36,36 @@
             }
         }
     }
+    footer{
+        width: 100%;
+        height: auto;
+        max-height: 60px;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        bottom: 0;
+        box-sizing: border-box;
+        padding-bottom: 65px;
+        a{
+            img{
+                animation: pulse .7s linear infinite alternate;
+                opacity: .5;
+                transition: .8s ease-out;
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+        @keyframes pulse{
+            from{
+                transform: scale(1);
+            }
+            to{
+                transform: scale(1.3);
+            }
+        }
+    }
 }
 @media only screen and(max-width: 540px){
     .line-chart-container{
