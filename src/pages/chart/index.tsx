@@ -108,7 +108,7 @@ const ChartLine = () =>{
         </div>
       </div>
       <footer>
-        <a href="https://github.com/M4RC0N3" target="_blank">
+        <a href="https://github.com/M4RC0N3" target="_blank"  rel="noreferrer">
           <img src={Github} alt="github logo" width={50} height={50}/>
         </a>
       </footer>
