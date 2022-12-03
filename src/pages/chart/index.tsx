@@ -13,12 +13,12 @@ ChartJS.register(
   Filler,
 );
 
-const NumberRandomGenerator = () =>{
+const NumberRandomGenerator = () =>{ // generate random number
   let operation:any = Math.floor(260* Math.random());
   return operation;
 }
 
-export const LineOptions = {
+export const LineOptions = { //chart configuration
   plugins: {
     legend: {
       display: false
@@ -49,11 +49,11 @@ export const LineOptions = {
       }
     }
   },
-    elements: {
-      point:{
-        radius: 0
-      }
-    },
+  elements: {
+    point:{
+      radius: 0
+    }
+  },
   legend: {
     display: false
   },
@@ -64,11 +64,11 @@ export const LineOptions = {
 
 const ChartLine = () =>{
   const chartValue = useRef();
-  const dataLine = {
+  const dataLine = { // chart stylizing
     labels: ["1", "2", "3","4" ,"5", "6", "7", "8", "9", "10"],
     datasets: [{
       label: "Dataset 1",
-      data: [0, 2, 3, 5, 6, 7, 8, 9, 10],
+      data: [0, 2, 3, 5, 6, 7, 8, 9, 10], // initialize values
       borderColor: "#F97F2A",
       backgroundColor: (context:any) => {
         const ctx = context.chart.ctx;
@@ -85,15 +85,15 @@ const ChartLine = () =>{
       },
     }],
   };
-  useEffect(()=>{
+  useEffect(()=>{ // this sections is able to remove the first item and add a new item in final array position
     let values: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     let currentValue:any = chartValue.current;
     setInterval(()=>{
-      values.splice(0, 1);
-      values.push(NumberRandomGenerator());
-      currentValue.data.datasets[0].data=values;
-      console.log(values);
-      currentValue.update();
+      values.splice(0, 1); // remove first item
+      values.push(NumberRandomGenerator()); // adds random number in final array
+      currentValue.data.datasets[0].data=values; //adds the array changes in array of chart
+      //console.log(values); //uncomment to see the vector being changed
+      currentValue.update(); // vector values update
     }, 900);
   }, [])
   return (
